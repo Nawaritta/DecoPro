@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class splash : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject intro;
     void Start()
     {
-        
+        intro.GetComponent<AudioSource>().Play();
+        Invoke("gotoScene", 4.5f);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void gotoScene()
     {
-        
+
+        SceneManager.LoadScene("Menu");
     }
 }
