@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import React, { useState, useEffect } from 'react'
-import Button from './Button'
+import React, { useState } from 'react'
 
 const NavBar = () => {
 
@@ -12,7 +11,9 @@ const NavBar = () => {
 
     return (
         <nav className="flex flex-wrap items-center justify-between p-3 bg-gray-800 w-full">
-            <Image src="/decoprologo.png" alt="decopro logo" width={120} height={50} />
+            <a href='/'>
+                <Image src="/decoprologo.png" alt="decopro logo" width={120} height={50} />
+            </a>
             <div className="flex md:hidden">
                 <button id="hamburger" onClick={() => { toggleMenu() }}>
                     <Image className={`toggle ${isMenuOpen ? 'hidden' : 'block'}`} src="/menu.png" width={40} height={40} />
