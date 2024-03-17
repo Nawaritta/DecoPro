@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Testemonials from './Testemonials'
 
 const GetApp = () => {
     return (
@@ -16,8 +17,16 @@ const GetApp = () => {
             </div>
             <h1 className='text-3xl text-blue-600 font-bold mb-8 uppercase'>Download Now on:</h1>
             <div className='flex flex-col md:flex-row gap-6 md:gap-12 justify-center'>
-                <Image src='/playstore.png' alt='get app from playstore' width={270} height={25} />
-                <Image src='/appstore.png' alt='get app from appstore' width={270} height={25} />
+                <div>
+                    <Image src='/playstore.png' alt='get app from playstore' width={270} height={25} />
+                </div>
+                <div className='flex flex-col items-center text-center'>
+                    <Image src='/appstore.png' alt='get app from appstore' width={270} height={25} />
+                    <p>Coming soon!</p>
+                </div>
+            </div>
+            <div className='w-full bg-gradient-to-b from-slate-300 to-purple-700'>
+                <Testemonials />
             </div>
         </div>
     )
