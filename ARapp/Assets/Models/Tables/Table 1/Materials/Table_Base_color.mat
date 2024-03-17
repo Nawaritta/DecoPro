@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fabric_08
+  m_Name: Table_Base_color
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a90648b752b131141977426bb72819e8, type: 3}
+        m_Texture: {fileID: 2800000, guid: f34b6ec92a3f83b44bc6ffb69b4684ad, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
