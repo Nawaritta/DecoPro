@@ -4,7 +4,7 @@ import Testemonials from './Testemonials'
 
 const GetApp = () => {
     return (
-        <div id='getapp' className='py-16 flex flex-col items-center text-center bg-slate-300 w-full'>
+        <div id='getapp' className='py-16 flex flex-col items-center text-center bg-gradient-to-t to-slate-300 from-gray-900 w-full'>
             <div className='flex flex-row gap-24 md:gap-36 mb-8 text-gray-700'>
                 <div className='text-center'>
                     <h3 className='text-xl font-bold'>2000+</h3>
@@ -25,7 +25,7 @@ const GetApp = () => {
                     <p>Coming soon!</p>
                 </div>
             </div>
-            <div className='w-full bg-gradient-to-b from-slate-300 to-purple-700'>
+            <div className='w-full bg-gradient-to-b to-slate-300 from-gray-900'>
                 <Testemonials />
             </div>
         </div>

@@ -1,18 +1,41 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import TestemonialsData from '@/data/TestimonialsData'
 import Image from 'next/image';
 
 const Testemonials = () => {
+    const imageRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        observer.observe(imageRef.current);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
     let isLeft = false;
     return (
         <section className="my-8 relative">
-            <div className='w-full h-full absolute top-0 left-0'>
-                <Image className='w-full h-full object-fit opacity-15' src='/abstract1.png' alt='abstract background' width={500} height={500} />
+            <div className='absolute left-4 -top-20'>
+                <Image src={isVisible ? '/light_lamp_on.png' : '/light_lamp_off.png'} alt='lamp background' width='100' height='150' />
+
             </div>
             <div className="container mx-auto flex flex-col items-center pb-6 mb-4 md:p-10 md:px-12 gap-12">
-                <h1 className="text-2xl md:text-4xl font-bold leading-none text-blue-600">Testimonial Highlights</h1>
+                <div className='relative'>
+                    <h1 className="absolute w-full text-2xl md:text-4xl font-bold leading-none text-purple-900 bottom-1 right-1">Testimonial Highlights</h1>
+                    <h1 className="text-2xl md:text-4xl font-bold leading-none text-purple-100">Testimonial Highlights</h1>
+                </div>
 
-                <div className="container mx-auto grid grid-cols-1 gap-8 lg:gap-20 md:px-10 md:pb-10 lg:grid-cols-2">
+                <div ref={imageRef} className="container mx-auto grid grid-cols-1 gap-8 lg:gap-20 md:px-10 md:pb-10 lg:grid-cols-2">
                     {TestemonialsData.map((element, key) => {
                         isLeft = !isLeft;
                         return <div key={key} className="flex flex-col items-center  lg:mx-12">
