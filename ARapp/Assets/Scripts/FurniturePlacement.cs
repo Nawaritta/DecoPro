@@ -41,10 +41,6 @@ public class FurniturePlacement : MonoBehaviour
         }
         
     }
-    public void SwitchFurniture(GameObject furniture)
-    {
-        Furniture = furniture;
-    }
     public bool isButtonPressed()
     {
         if(EventSystem.current.currentSelectedGameObject?.GetComponents<Button>() == null)
@@ -55,5 +51,9 @@ public class FurniturePlacement : MonoBehaviour
         {
             return true;
         }
+    }
+    public void SwitchFurniture(GameObject furniture)
+    {
+        Furniture = furniture;
     }
 }
