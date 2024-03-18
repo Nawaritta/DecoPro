@@ -1,6 +1,7 @@
 # Modified from:
 #     https://github.com/github/gitignore/blob/master/Unity.gitignore
 
+decopro_BackUpThisFolder_ButDontShipItWithYourGame/
 /[Ll]ibrary/
 /[Uu]serSettings/
 [Tt]emp/
@@ -42,7 +43,7 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
-*.meta
+
 
 # Unity3D generated file on crash reports
 sysinfo.txt
