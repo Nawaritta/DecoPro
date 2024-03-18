@@ -30,10 +30,7 @@ const Testemonials = () => {
 
             </div>
             <div className="container mx-auto flex flex-col items-center pb-6 mb-4 md:p-10 md:px-12 gap-12">
-                <div className='relative'>
-                    <h1 className="absolute w-full text-2xl md:text-4xl font-bold leading-none text-purple-900 bottom-1 right-1">Testimonial Highlights</h1>
-                    <h1 className="text-2xl md:text-4xl font-bold leading-none text-purple-100">Testimonial Highlights</h1>
-                </div>
+                <h1 className="text-2xl md:text-4xl font-bold leading-none text-purple-600">Testimonial Highlights</h1>
 
                 <div ref={imageRef} className="container mx-auto grid grid-cols-1 gap-8 lg:gap-20 md:px-10 md:pb-10 lg:grid-cols-2">
                     {TestemonialsData.map((element, key) => {
@@ -51,7 +48,7 @@ const Testemonials = () => {
                                 </svg>
                             </div>
                             <span className="w-20 h-1 my-2 rounded-lg bg-violet-900"></span>
-                            <p className='text-purple-950'>{element.user}</p>
+                            <p className='text-purple-400'>{element.user}</p>
                         </div>
                     })}
                 </div>
