@@ -25,13 +25,13 @@ const NavBar = () => {
             </div>
             <div
                 className={`toggle ${isMenuOpen ? '' : 'hidden'} w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 border-t-2 border-gray-500 md:border-none`}>
-                <a href="#"
+                <a href="#features"
                     className="block md:inline-block text-slate-100 hover:text-orange-400 px-3 py-3 border-b-2 border-gray-500 md:border-none">Features
                 </a>
                 <a href="#"
                     className="block md:inline-block text-slate-100 hover:text-orange-400 px-3 py-3 border-b-2 border-gray-500 md:border-none">How It Works
                 </a>
-                <a href="#"
+                <a href="#contact"
                     className="block md:inline-block text-slate-100 hover:text-orange-400 px-3 py-3 border-b-2 border-gray-500 md:border-none">Contact
                 </a>
             </div>
