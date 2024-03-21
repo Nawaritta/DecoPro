@@ -17,7 +17,6 @@ public class FurniturePlacement : MonoBehaviour
 
     private List<ARRaycastHit> raycastHits = new List<ARRaycastHit>();
 
-
     private void Update()
     {
         if (Input.touchCount > 0)
@@ -32,28 +31,34 @@ public class FurniturePlacement : MonoBehaviour
                     _object.transform.rotation = raycastHits[0].pose.rotation;
 
                 }
-                foreach(var planes in planeManager.trackables)
+                foreach (var planes in planeManager.trackables)
                 {
                     planes.gameObject.SetActive(false);
                 }
                 planeManager.enabled = false;
             }
         }
-        
+
     }
+
     public bool isButtonPressed()
     {
-        if(EventSystem.current.currentSelectedGameObject?.GetComponents<Button>() == null)
+        if (EventSystem.current.currentSelectedGameObject?.GetComponents<Button>() == null)
         {
+            Debug.Log("collision detected");
             return false;
         }
         else
         {
+            Debug.Log("No collision or button pressed.");
             return true;
         }
     }
     public void SwitchFurniture(GameObject furniture)
     {
+        Debug.Log("Furniture placed ");
         Furniture = furniture;
+
     }
 }
+

@@ -10,4 +10,11 @@ public class MenuControl : MonoBehaviour
         bool val = GetComponent<Animator>().GetBool("isDisplay");
         GetComponent<Animator>().SetBool("isDisplay", !val);
     }
+
+    public void hideMenu()
+    {
+        bool val = GetComponent<Animator>().GetBool("isHide");
+        GetComponent<Animator>().SetBool("isHide", !val);
+        GetComponent<Animator>().SetBool("isDisplay", false);
+    }
 }
