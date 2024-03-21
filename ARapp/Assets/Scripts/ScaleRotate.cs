@@ -11,6 +11,7 @@ public class ScaleRotate : MonoBehaviour
     public float scaleMax;
     public float rotatMin;
     public float rotatMax;
+    private bool scriptEnabled = true;
 
     void Start()
     {
@@ -23,16 +24,28 @@ public class ScaleRotate : MonoBehaviour
         rotate.maxValue = rotatMax;
         rotate.minValue = rotatMin;
         rotate.onValueChanged.AddListener(RotateUpdate);
-        
+
+        Button confirmButton = GameObject.Find("ConfirmBtn").GetComponent<Button>();
+        confirmButton.onClick.AddListener(ToggleScriptEnabled);
+
+    }
+
+    void ToggleScriptEnabled()
+    {
+        scriptEnabled = false;
     }
 
     void ScaleUpdate(float value)
     {
+        if (!scriptEnabled)
+            return;
         transform.localScale = new Vector3(value, value, value);
     }
 
-    void RotateUpdate(float value) 
+    void RotateUpdate(float value)
     {
+        if (!scriptEnabled)
+            return;
         transform.localEulerAngles = new Vector3(transform.rotation.x, value, transform.rotation.z);
     }
 }

@@ -13,9 +13,21 @@ public class FurniturePlacement : MonoBehaviour
     public ARSessionOrigin sessionOrigin;
     public ARRaycastManager raycastManager;
     public ARPlaneManager planeManager;
+    private bool renderingEnabled = true;
 
 
     private List<ARRaycastHit> raycastHits = new List<ARRaycastHit>();
+
+    private void Start()
+    {
+        Button confirmButton = GameObject.Find("ConfirmBtn").GetComponent<Button>();
+        confirmButton.onClick.AddListener(ToggleRenderingEnabled);
+    }
+
+    void ToggleRenderingEnabled()
+    {
+        renderingEnabled = true;
+    }
 
     private void Update()
     {
@@ -24,9 +36,10 @@ public class FurniturePlacement : MonoBehaviour
             if (Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 bool collision = raycastManager.Raycast(Input.GetTouch(0).position, raycastHits, TrackableType.PlaneWithinPolygon);
-                if (collision && isButtonPressed() == false)
+                if (collision && isButtonPressed() == false && renderingEnabled)
                 {
                     GameObject _object = Instantiate(Furniture);
+                    renderingEnabled = false;
                     _object.transform.position = raycastHits[0].pose.position;
                     _object.transform.rotation = raycastHits[0].pose.rotation;
 
@@ -45,20 +58,18 @@ public class FurniturePlacement : MonoBehaviour
     {
         if (EventSystem.current.currentSelectedGameObject?.GetComponents<Button>() == null)
         {
-            Debug.Log("collision detected");
             return false;
         }
         else
         {
-            Debug.Log("No collision or button pressed.");
             return true;
         }
     }
     public void SwitchFurniture(GameObject furniture)
     {
-        Debug.Log("Furniture placed ");
         Furniture = furniture;
 
     }
 }
+
 
