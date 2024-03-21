@@ -28,7 +28,7 @@ const NavBar = () => {
                 <a href="#features"
                     className="block md:inline-block text-slate-100 hover:text-orange-400 px-3 py-3 border-b-2 border-gray-500 md:border-none">Features
                 </a>
-                <a href="#"
+                <a href="#howitworks"
                     className="block md:inline-block text-slate-100 hover:text-orange-400 px-3 py-3 border-b-2 border-gray-500 md:border-none">How It Works
                 </a>
                 <a href="#contact"

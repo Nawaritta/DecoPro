@@ -25,8 +25,8 @@ const Testemonials = () => {
     let isLeft = false;
     return (
         <section className="my-8 relative">
-            <div className='absolute left-4 -top-20'>
-                <Image src={isVisible ? '/light_lamp_on.png' : '/light_lamp_off.png'} alt='lamp background' width='100' height='150' />
+            <div className='absolute left-0 -top-32 lg:-top-20'>
+                <img className='max-sm:w-16 w-28 lg:w-44' src={isVisible ? '/light_lamp_on.png' : '/light_lamp_off.png'} alt='lamp background' />
 
             </div>
             <div className="container mx-auto flex flex-col items-center pb-6 mb-4 md:p-10 md:px-12 gap-12">
@@ -35,7 +35,7 @@ const Testemonials = () => {
                 <div ref={imageRef} className="container mx-auto grid grid-cols-1 gap-8 lg:gap-20 md:px-10 md:pb-10 lg:grid-cols-2">
                     {TestemonialsData.map((element, key) => {
                         isLeft = !isLeft;
-                        return <div key={key} className="flex flex-col items-center  lg:mx-12">
+                        return <div key={key} className="flex flex-col items-center mx-6 sm:mx-12 lg:mx-4">
                             <div className="relative text-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="absolute top-0 left-0 w-8 h-8 text-purple-500">
                                     <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>

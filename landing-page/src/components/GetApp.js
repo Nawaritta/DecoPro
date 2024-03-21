@@ -3,7 +3,7 @@ import React from 'react'
 
 const GetApp = () => {
     return (
-        <div id='getapp' className='py-16 flex flex-col items-center text-center bg-gradient-to-t from-gray-900 via-gray-700 to-gray-400 w-full'>
+        <div id='getapp' className='py-16 flex flex-col items-center text-center bg-gradient-to-t from-gray-900 via-gray-700 to-teal-600 w-full'>
             <div className='flex flex-row gap-24 md:gap-36 mb-8 text-white'>
                 <div className='text-center'>
                     <h3 className='text-xl font-bold'>2000+</h3>
@@ -14,7 +14,7 @@ const GetApp = () => {
                     <p>Downloads</p>
                 </div>
             </div>
-            <h1 className='text-3xl text-blue-600 font-bold mb-8 uppercase'>Download Now on:</h1>
+            <h1 className='text-2xl md:text-4xl text-blue-500 font-bold mb-8 uppercase'>Download Now on:</h1>
             <div className='flex flex-col md:flex-row gap-6 md:gap-12 justify-center'>
                 <div>
                     <Image src='/playstore.png' alt='get app from playstore' width={270} height={25} />

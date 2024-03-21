@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
 
@@ -16,8 +16,23 @@ const MyModel = ({ modelPath, rotDir = 1, modelPos }) => {
 };
 
 const ThreeScene = ({ modelPath, rotDir, modelPos, intensity }) => {
+    const [canvasHeight, setCanvasHeight] = useState();
+    useEffect(() => {
+        const setHeightBasedOnWidth = () => {
+            if (window.innerWidth >= 640) {
+                setCanvasHeight('280px');
+            } else {
+                setCanvasHeight('220px');
+            }
+        }
+
+        setHeightBasedOnWidth();
+
+        return () => { }
+    }, []);
+
     return (
-        <Canvas style={{ width: '100%', height: '280px', flex: 1 }}>
+        <Canvas className='flex-1 w-full' style={{ height: canvasHeight }}>
             <ambientLight intensity={intensity} />
             <pointLight position={[10, 10, 10]} />
             <MyModel modelPath={modelPath} rotDir={rotDir} modelPos={modelPos} />

@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 
 const Contact = () => {
     return (
-        <div className="grid w-full grid-cols-1 gap-8 px-8 py-16 mx-auto md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 bg-gradient-to-b from-blue-800 to-indigo-900 text-gray-100">
+        <div id='contact' className="grid w-full grid-cols-1 gap-8 px-8 py-16 mx-auto md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 bg-gradient-to-b from-blue-800 to-indigo-900 text-gray-100">
             <div className="flex flex-col justify-between">
                 <div className="space-y-2">
                     <h2 className="text-4xl font-bold leading-tight lg:text-5xl">Let's talk!</h2>
