@@ -27,6 +27,7 @@ public class ScaleRotate : MonoBehaviour
 
         Button confirmButton = GameObject.Find("ConfirmBtn").GetComponent<Button>();
         confirmButton.onClick.AddListener(ToggleScriptEnabled);
+        // touch object --> scriptEnabled = true
 
     }
 
