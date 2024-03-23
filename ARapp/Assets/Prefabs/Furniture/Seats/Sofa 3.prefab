@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 5414488437523806267}
   - component: {fileID: 7836500580334832881}
   - component: {fileID: -1263639974897081456}
+  - component: {fileID: 9043328019397731032}
   m_Layer: 0
   m_Name: Sofa 3
   m_TagString: Furniture
@@ -354,3 +355,16 @@ MonoBehaviour:
   scaleMax: 1.5
   rotatMin: -180
   rotatMax: 180
+--- !u!65 &9043328019397731032
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8628944930278976804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01627158, y: 0.012000005, z: 0.007716086}
+  m_Center: {x: 0.000038318038, y: 0.0000004059076, z: 0.0023580433}

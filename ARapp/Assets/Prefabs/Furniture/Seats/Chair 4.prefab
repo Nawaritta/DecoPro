@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3377296482204848343}
+  - component: {fileID: 2078946002896586430}
+  - component: {fileID: 5664087458967988981}
   m_Layer: 0
   m_Name: Chair 4
-  m_TagString: Untagged
+  m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +34,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2078946002896586430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708143238577867373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b664a8fa769174c9c939cac98233b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleMin: 0.5
+  scaleMax: 1.5
+  rotatMin: -180
+  rotatMax: 180
+--- !u!65 &5664087458967988981
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708143238577867373}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4823327, y: 1.107439, z: 0.48931903}
+  m_Center: {x: 0, y: 0.54784584, z: -0.009372741}
 --- !u!1 &7867844855722414980
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +74,6 @@ GameObject:
   - component: {fileID: 7384746262278981950}
   - component: {fileID: 5896399437156533915}
   - component: {fileID: 8516534794301452881}
-  - component: {fileID: 5465900376139273186}
   m_Layer: 0
   m_Name: Chair 4
   m_TagString: Furniture
@@ -116,19 +146,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5465900376139273186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7867844855722414980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b664a8fa769174c9c939cac98233b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaleMin: 0.5
-  scaleMax: 1.5
-  rotatMin: -180
-  rotatMax: 180

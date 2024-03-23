@@ -1255,6 +1255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6478937771024215643}
   - component: {fileID: 1888177313362765389}
+  - component: {fileID: -8212046841342852623}
   m_Layer: 0
   m_Name: wordrobe 2
   m_TagString: Furniture
@@ -1317,6 +1318,19 @@ MonoBehaviour:
   scaleMax: 1.5
   rotatMin: -180
   rotatMax: 180
+--- !u!65 &-8212046841342852623
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954356016831411425}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.54071355, y: 1.2641561, z: 0.79126537}
+  m_Center: {x: -0.31795812, y: 0.60202956, z: 0}
 --- !u!1 &6183658020979420618
 GameObject:
   m_ObjectHideFlags: 0

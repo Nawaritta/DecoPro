@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7077251933391022520}
   - component: {fileID: -6491278071899837552}
+  - component: {fileID: 4794646670060846473}
   m_Layer: 0
   m_Name: Vase 1
   m_TagString: Furniture
@@ -49,6 +50,19 @@ MonoBehaviour:
   scaleMax: 1.5
   rotatMin: -180
   rotatMax: 180
+--- !u!65 &4794646670060846473
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939468777035673914}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3141832, y: 1.4184715, z: 0.40002733}
+  m_Center: {x: 0, y: 0.7402275, z: 0}
 --- !u!1001 &8413650252622159707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,6 +134,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: vase 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1346802da69197c44b028e28659eac6f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Furniture
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1346802da69197c44b028e28659eac6f, type: 3}

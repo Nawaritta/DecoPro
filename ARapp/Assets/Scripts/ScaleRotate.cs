@@ -11,7 +11,7 @@ public class ScaleRotate : MonoBehaviour
     public float scaleMax;
     public float rotatMin;
     public float rotatMax;
-    private bool scriptEnabled = true;
+    public bool scriptEnabled = true;
 
     void Start()
     {
@@ -31,19 +31,19 @@ public class ScaleRotate : MonoBehaviour
 
     }
 
-    void ToggleScriptEnabled()
+     void ToggleScriptEnabled()
     {
         scriptEnabled = false;
     }
 
-    void ScaleUpdate(float value)
+    public void ScaleUpdate(float value)
     {
         if (!scriptEnabled)
             return;
         transform.localScale = new Vector3(value, value, value);
     }
 
-    void RotateUpdate(float value)
+    public void RotateUpdate(float value)
     {
         if (!scriptEnabled)
             return;

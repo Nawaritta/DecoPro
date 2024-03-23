@@ -176,6 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2750195872557825633}
   - component: {fileID: 5640276966882879558}
+  - component: {fileID: 6546319840037902714}
   m_Layer: 0
   m_Name: Wardrobe 1
   m_TagString: Furniture
@@ -216,3 +217,16 @@ MonoBehaviour:
   scaleMax: 1.5
   rotatMin: -180
   rotatMax: 180
+--- !u!65 &6546319840037902714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3270027019449902299}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6837359, y: 1.9817369, z: 0.8721096}
+  m_Center: {x: -0.00009098649, y: 1.0107919, z: -0.00019451976}

@@ -176,6 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8010006236699547088}
   - component: {fileID: -3492681616771651520}
+  - component: {fileID: 3066397036090027737}
   m_Layer: 0
   m_Name: Tableau 2
   m_TagString: Furniture
@@ -216,3 +217,16 @@ MonoBehaviour:
   scaleMax: 1.5
   rotatMin: -180
   rotatMax: 180
+--- !u!65 &3066397036090027737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233505130250997610}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05771643, y: 1.4386021, z: 1}
+  m_Center: {x: 0, y: 0.7876747, z: 0}

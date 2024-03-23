@@ -325,6 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4113897994990339296}
   - component: {fileID: -1617577812276510589}
+  - component: {fileID: 6793992170369575194}
   m_Layer: 0
   m_Name: Table 4
   m_TagString: Furniture
@@ -368,6 +369,19 @@ MonoBehaviour:
   scaleMax: 1.5
   rotatMin: -180
   rotatMax: 180
+--- !u!65 &6793992170369575194
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3628864196108033626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.58898, y: 0.74825454, z: 1.6761084}
+  m_Center: {x: -0.014689088, y: 0.24162436, z: -0.05930862}
 --- !u!1 &4863164566776417407
 GameObject:
   m_ObjectHideFlags: 0

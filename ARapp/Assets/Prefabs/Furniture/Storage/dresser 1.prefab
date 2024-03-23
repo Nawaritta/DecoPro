@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1008178249831646035}
   - component: {fileID: 4489639640806936503}
+  - component: {fileID: 923737877753290246}
   m_Layer: 0
   m_Name: dresser 1
   m_TagString: Furniture
@@ -140,6 +141,19 @@ MonoBehaviour:
   scaleMax: 1.5
   rotatMin: -180
   rotatMax: 180
+--- !u!65 &923737877753290246
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483596456726223337}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.80157435, y: 1.1317452, z: 0.58159703}
+  m_Center: {x: 0.000023186207, y: 0.5514285, z: 0.32174364}
 --- !u!1 &693034825209897071
 GameObject:
   m_ObjectHideFlags: 0

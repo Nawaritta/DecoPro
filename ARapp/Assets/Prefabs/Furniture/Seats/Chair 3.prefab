@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2048488197893591770}
   - component: {fileID: 3153200048624901503}
   - component: {fileID: 875560853399202229}
-  - component: {fileID: 4122335217343135734}
   m_Layer: 0
   m_Name: Chair 3
   m_TagString: Furniture
@@ -85,22 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4122335217343135734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668127936797427808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b664a8fa769174c9c939cac98233b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaleMin: 0.5
-  scaleMax: 1.5
-  rotatMin: -180
-  rotatMax: 180
 --- !u!1 &6937333645062201933
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,9 +93,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7713976343917770999}
+  - component: {fileID: -3620015681860996670}
+  - component: {fileID: 6112294989756986004}
   m_Layer: 0
   m_Name: Chair 3
-  m_TagString: Untagged
+  m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,3 +118,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3620015681860996670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6937333645062201933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b664a8fa769174c9c939cac98233b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleMin: 0.5
+  scaleMax: 1.5
+  rotatMin: -180
+  rotatMax: 180
+--- !u!65 &6112294989756986004
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6937333645062201933}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5422318, y: 0.82837236, z: 0.45534608}
+  m_Center: {x: 0, y: 0.52163434, z: 0.022748724}

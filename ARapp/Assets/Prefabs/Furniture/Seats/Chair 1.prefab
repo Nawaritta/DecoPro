@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1486506169062974242}
   - component: {fileID: 2526232321336798343}
   - component: {fileID: 354110503954618445}
-  - component: {fileID: 2465868386654199753}
   m_Layer: 0
   m_Name: Chair 1
   m_TagString: Furniture
@@ -85,22 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2465868386654199753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2299916438499801496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b664a8fa769174c9c939cac98233b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaleMin: 0.5
-  scaleMax: 1.5
-  rotatMin: -180
-  rotatMax: 180
 --- !u!1 &3375326754411663569
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,9 +93,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2710112957939059307}
+  - component: {fileID: -6994192251748170374}
+  - component: {fileID: 468535338459173704}
   m_Layer: 0
   m_Name: Chair 1
-  m_TagString: Untagged
+  m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,3 +118,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6994192251748170374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3375326754411663569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b664a8fa769174c9c939cac98233b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleMin: 0.5
+  scaleMax: 1.5
+  rotatMin: -180
+  rotatMax: 180
+--- !u!65 &468535338459173704
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3375326754411663569}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.57206666, y: 0.95197797, z: 0.57731044}
+  m_Center: {x: 0, y: 0.4786476, z: 0.041202962}

@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 859615333112274640}
+  - component: {fileID: -3316292744448759538}
+  - component: {fileID: 4818929051846780912}
   m_Layer: 0
   m_Name: Dresser 2
-  m_TagString: Untagged
+  m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +34,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3316292744448759538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46767984098837610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b664a8fa769174c9c939cac98233b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleMin: 0.5
+  scaleMax: 1.5
+  rotatMin: -180
+  rotatMax: 180
+--- !u!65 &4818929051846780912
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46767984098837610}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.689874, y: 0.8772293, z: 0.57778955}
+  m_Center: {x: 0.0051650703, y: 0.42813936, z: -0.026866198}
 --- !u!1 &5865657734958393039
 GameObject:
   m_ObjectHideFlags: 0
