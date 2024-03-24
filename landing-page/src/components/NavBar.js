@@ -19,8 +19,8 @@ const NavBar = () => {
             </a>
             <div className="flex md:hidden">
                 <button id="hamburger" onClick={() => { toggleMenu() }}>
-                    <Image className={`toggle ${isMenuOpen ? 'hidden' : 'block'}`} src="/menu.png" width={40} height={40} />
-                    <img className={`toggle ${isMenuOpen ? 'block' : 'hidden'}`} src="/close-window.png" width={40} height={40} />
+                    <Image className={`toggle ${isMenuOpen ? 'hidden' : 'block'}`} src="/menu.png" width={40} height={40} alt='menu icon' />
+                    <img className={`toggle ${isMenuOpen ? 'block' : 'hidden'}`} src="/close-window.png" width={40} height={40} alt='close menu icon' />
                 </button>
             </div>
             <div
