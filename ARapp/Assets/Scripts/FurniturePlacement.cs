@@ -7,43 +7,106 @@ using UnityEngine.XR.ARSubsystems;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
+[RequireComponent(typeof(ARRaycastManager))]
 public class FurniturePlacement : MonoBehaviour
 {
     public GameObject Furniture;
     public ARSessionOrigin sessionOrigin;
     public ARRaycastManager raycastManager;
     public ARPlaneManager planeManager;
+    private bool renderingEnabled = true;
+    public GameObject currentItem;
+    public GameObject controlPanel;
+    public GameObject menuPanel;
+    public GameObject categoriesPanel;
 
+
+
+    [SerializeField]
+    private Camera arCamera;
 
     private List<ARRaycastHit> raycastHits = new List<ARRaycastHit>();
 
+    private void Start()
+    {
+        controlPanel.gameObject.SetActive(false);
+        //Button confirmButton = GameObject.Find("ConfirmBtn").GetComponent<Button>();
+        //confirmButton.onClick.AddListener(ToggleRenderingEnabled);
+
+    }
+
+    public void ToggleRenderingEnabled()
+    {
+        currentItem = null;
+        renderingEnabled = true;
+        controlPanel.gameObject.SetActive(false);
+        menuPanel.GetComponent<Animator>().SetBool("isHide", false);
+    }
 
     private void Update()
     {
         if (Input.touchCount > 0)
         {
+            /*if (Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                Ray ray = arCamera.ScreenPointToRay(Input.GetTouch(0).position);
+                RaycastHit hitObject;
+
+                if (Physics.Raycast(ray, out hitObject))
+                {
+                    //PlacementObject placementObject = hitObject.transform.GetComponent<PlacementObject>();
+
+                    if (hitObject.transform.tag == "Furniture")
+                    {
+                        ChangeSelectedObject(hitObject.transform.gameObject);
+                    }
+                }
+            }*/
+
             if (Input.GetTouch(0).phase == TouchPhase.Began)
             {
-                bool collision = raycastManager.Raycast(Input.GetTouch(0).position, raycastHits, TrackableType.PlaneWithinPolygon);
-                if (collision && isButtonPressed() == false)
+                //Select item
+                Ray ray = arCamera.ScreenPointToRay(Input.GetTouch(0).position);
+                RaycastHit hitObject;
+                if (Physics.Raycast(ray, out hitObject) && currentItem == null)
                 {
-                    GameObject _object = Instantiate(Furniture);
-                    _object.transform.position = raycastHits[0].pose.position;
-                    _object.transform.rotation = raycastHits[0].pose.rotation;
+                    if (hitObject.transform.tag == "Furniture")
+                    {
+                        ChangeSelectedObject(hitObject.transform.gameObject);
+                    }
+                }
 
-                }
-                foreach(var planes in planeManager.trackables)
+                if (currentItem == null && Furniture != null)
                 {
-                    planes.gameObject.SetActive(false);
+                    //place item
+                    bool collision = raycastManager.Raycast(Input.GetTouch(0).position, raycastHits, TrackableType.PlaneWithinPolygon);
+                    if (collision && isButtonPressed() == false && renderingEnabled)
+                    {
+                        currentItem = Instantiate(Furniture);
+                        Furniture = null;
+                        controlPanel.gameObject.SetActive(true);
+                        menuPanel.GetComponent<Animator>().SetBool("isHide", true);
+                        categoriesPanel.GetComponent<Animator>().SetBool("isDisplay", false);
+
+                        renderingEnabled = false;
+                        currentItem.transform.position = raycastHits[0].pose.position;
+                        currentItem.transform.rotation = raycastHits[0].pose.rotation;
+
+                    }
+                    foreach (var planes in planeManager.trackables)
+                    {
+                        planes.gameObject.SetActive(false);
+                    }
+                    planeManager.enabled = false;
                 }
-                planeManager.enabled = false;
             }
         }
-        
+
     }
     public bool isButtonPressed()
     {
-        if(EventSystem.current.currentSelectedGameObject?.GetComponents<Button>() == null)
+        if (EventSystem.current.currentSelectedGameObject?.GetComponents<Button>() == null)
         {
             return false;
         }
@@ -56,4 +119,28 @@ public class FurniturePlacement : MonoBehaviour
     {
         Furniture = furniture;
     }
+
+    void ChangeSelectedObject(GameObject selected)
+    {
+        currentItem = selected;
+        currentItem.GetComponent<ScaleRotate>().scriptEnabled = true;
+        controlPanel.gameObject.SetActive(true);
+        menuPanel.GetComponent<Animator>().SetBool("isHide", true);
+        categoriesPanel.GetComponent<Animator>().SetBool("isDisplay", false);
+       
+    }
+
+    public void ClearCurrent() {
+
+        renderingEnabled = true;
+        if (currentItem != null)
+        {
+            Destroy(currentItem);
+            
+        }
+        currentItem = null;
+        controlPanel.gameObject.SetActive(false);
+        menuPanel.GetComponent<Animator>().SetBool("isHide", false);
+    }
+
 }

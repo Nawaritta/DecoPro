@@ -64,6 +64,3 @@ Thumbs.db.meta
 
 # VS Code
 *.vscode
-
-#backup files
-decopro_BackUpThisFolder_ButDontShipItWithYourGame/
