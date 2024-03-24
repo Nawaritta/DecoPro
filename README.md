@@ -1,5 +1,10 @@
 # DECOPRO
 
+<div align="center">
+  <img src="https://github.com/Nawaritta/DecoPro/assets/105720445/ff3c261a-23c9-42bf-bdf0-dd54a9d60476" alt="logo">
+</div>
+
+
 Welcome to DecoPro! This project consists of a Unity app for interior design visualization using Augmented Reality (AR) and a Next.js landing page to showcase the app and provide information to users.
 
 ## Overview
