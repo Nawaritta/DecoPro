@@ -8046,7 +8046,7 @@ GameObject:
   - component: {fileID: 3261113097822724143}
   - component: {fileID: 3261113097822724144}
   m_Layer: 5
-  m_Name: ySlider
+  m_Name: zSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8096,10 +8096,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 3261113099152186622}
   m_HandleRect: {fileID: 3261113098239671986}
   m_Direction: 0
-  m_MinValue: 0.5
-  m_MaxValue: 1.5
+  m_MinValue: -2
+  m_MaxValue: 2
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8472,7 +8472,7 @@ GameObject:
   - component: {fileID: 3261113098030507701}
   - component: {fileID: 3261113098030507702}
   m_Layer: 5
-  m_Name: XSlider
+  m_Name: xSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8522,10 +8522,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 3261113099368046387}
   m_HandleRect: {fileID: 3261113097869346137}
   m_Direction: 0
-  m_MinValue: 0.5
-  m_MaxValue: 1.5
+  m_MinValue: -2
+  m_MaxValue: 2
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10310,7 +10310,7 @@ GameObject:
   - component: {fileID: 3261113099062926296}
   - component: {fileID: 3261113099062926298}
   m_Layer: 5
-  m_Name: zSlider
+  m_Name: ySlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10360,10 +10360,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 3261113098254023443}
   m_HandleRect: {fileID: 3261113098489019868}
   m_Direction: 0
-  m_MinValue: 0.5
-  m_MaxValue: 1.5
+  m_MinValue: -2
+  m_MaxValue: 2
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10999,7 +10999,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 45, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3261113099342053969

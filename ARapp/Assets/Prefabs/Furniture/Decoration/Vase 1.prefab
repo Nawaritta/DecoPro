@@ -48,8 +48,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleMin: 0.5
   scaleMax: 1.5
-  rotatMin: -180
-  rotatMax: 180
+  rotateMin: 0
+  rotateMax: 0
+  xSlider: {fileID: 0}
+  ySlider: {fileID: 0}
+  zSlider: {fileID: 0}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
+  minZ: 0
+  maxZ: 0
+  scriptEnabled: 1
 --- !u!65 &4794646670060846473
 BoxCollider:
   m_ObjectHideFlags: 0
