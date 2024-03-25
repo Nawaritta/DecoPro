@@ -32,4 +32,4 @@ To get started with the project, follow the instructions below:
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [License](LICENSE).
