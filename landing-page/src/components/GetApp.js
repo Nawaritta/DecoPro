@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const GetApp = () => {
@@ -17,9 +18,9 @@ const GetApp = () => {
             <h1 className='text-2xl md:text-4xl text-blue-500 font-bold mb-8 uppercase'>Download Now on:</h1>
             <div className='flex flex-col md:flex-row gap-6 md:gap-12 justify-center'>
                 <div>
-                    <a href='https://github.com/Nawaritta/DecoPro'>
+                    <Link href='https://github.com/Nawaritta/DecoPro'>
                         <Image src='/playstore.png' alt='get app from playstore' width={270} height={25} />
-                    </a>
+                    </Link>
                 </div>
                 <div className='flex flex-col items-center text-center'>
                     <Image src='/appstore.png' alt='get app from appstore' width={270} height={25} />

@@ -17,7 +17,7 @@ const HowItWorks = () => {
                         <p className="text-2xl">
                             Scan Your Space
                         </p>
-                        <p>Utilize the app to scan your room with your device's camera, allowing the app to create a digital representation of your space.</p>
+                        <p>Utilize the app to scan your room with your device&apos;s camera, allowing the app to create a digital representation of your space.</p>
                     </div>
                     <div className="flex flex-col p-8 space-y-4 rounded-3xl bg-gray-900">
                         <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 text-xl font-bold rounded-full bg-pink-500 text-gray-900">2</div>

@@ -19,7 +19,7 @@ const Terms = ({ isModalOpen, toggleModal }) => {
                     {/* Modal body */}
                     <div className="p-6 space-y-6">
                         <p className="text-gray-500 text-base leading-relaxed">
-                            We value your privacy and are committed to protecting your personal information. Here's a brief overview of how we collect and use data:
+                            We value your privacy and are committed to protecting your personal information. Here&apos;s a brief overview of how we collect and use data:
                         </p>
                         <ul className='text-gray-500'>
                             <li><strong>Information Collection:</strong> We may collect personal and non-personal information when you use our app.</li>

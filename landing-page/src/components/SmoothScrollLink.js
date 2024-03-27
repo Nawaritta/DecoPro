@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useEffect } from 'react';
 
 const SmoothScrollLink = ({ href, children }) => {
@@ -22,7 +23,7 @@ const SmoothScrollLink = ({ href, children }) => {
     }, [href]);
 
     return (
-        <a href={href}>{children}</a>
+        <Link href={href}>{children}</Link>
     );
 };
 
