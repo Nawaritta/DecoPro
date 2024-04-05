@@ -12,7 +12,7 @@ using UnityEngine.UI;
 public class FurniturePlacement : MonoBehaviour
 {
     public GameObject Furniture;
-    public ARSessionOrigin sessionOrigin;
+   // public ARSessionOrigin sessionOrigin;
     public ARRaycastManager raycastManager;
     public ARPlaneManager planeManager;
     private bool renderingEnabled = true;
@@ -20,8 +20,6 @@ public class FurniturePlacement : MonoBehaviour
     public GameObject controlPanel;
     public GameObject menuPanel;
     public GameObject categoriesPanel;
-
-
 
     [SerializeField]
     private Camera arCamera;
@@ -31,8 +29,6 @@ public class FurniturePlacement : MonoBehaviour
     private void Start()
     {
         controlPanel.gameObject.SetActive(false);
-        //Button confirmButton = GameObject.Find("ConfirmBtn").GetComponent<Button>();
-        //confirmButton.onClick.AddListener(ToggleRenderingEnabled);
 
     }
 
@@ -48,21 +44,6 @@ public class FurniturePlacement : MonoBehaviour
     {
         if (Input.touchCount > 0)
         {
-            /*if (Input.GetTouch(0).phase == TouchPhase.Began)
-            {
-                Ray ray = arCamera.ScreenPointToRay(Input.GetTouch(0).position);
-                RaycastHit hitObject;
-
-                if (Physics.Raycast(ray, out hitObject))
-                {
-                    //PlacementObject placementObject = hitObject.transform.GetComponent<PlacementObject>();
-
-                    if (hitObject.transform.tag == "Furniture")
-                    {
-                        ChangeSelectedObject(hitObject.transform.gameObject);
-                    }
-                }
-            }*/
 
             if (Input.GetTouch(0).phase == TouchPhase.Began)
             {
@@ -94,6 +75,7 @@ public class FurniturePlacement : MonoBehaviour
                         currentItem.transform.rotation = raycastHits[0].pose.rotation;
 
                     }
+                    //hide plans
                     foreach (var planes in planeManager.trackables)
                     {
                         planes.gameObject.SetActive(false);
@@ -106,6 +88,8 @@ public class FurniturePlacement : MonoBehaviour
     }
     public bool isButtonPressed()
     {
+        // Check if any button is currently selected
+
         if (EventSystem.current.currentSelectedGameObject?.GetComponents<Button>() == null)
         {
             return false;
@@ -123,9 +107,9 @@ public class FurniturePlacement : MonoBehaviour
     void ChangeSelectedObject(GameObject selected)
     {
         currentItem = selected;
-        currentItem.GetComponent<ScaleRotate>().scriptEnabled = true;
-        controlPanel.gameObject.SetActive(true);
-        menuPanel.GetComponent<Animator>().SetBool("isHide", true);
+        currentItem.GetComponent<ScaleRotate>().scriptEnabled = true; // allow the rotation
+        controlPanel.gameObject.SetActive(true); // show the control panel
+        menuPanel.GetComponent<Animator>().SetBool("isHide", true); 
         categoriesPanel.GetComponent<Animator>().SetBool("isDisplay", false);
        
     }

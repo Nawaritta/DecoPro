@@ -2,8 +2,6 @@
 using UnityEngine.UI ;
 using UnityEngine.Events ;
 
-//------- Created by  : Hamza Herbou
-//------- Email       : hamza95herbou@gmail.com
 
 namespace EasyUI.Tabs {
    public enum TabsType{

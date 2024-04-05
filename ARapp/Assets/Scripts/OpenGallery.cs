@@ -16,6 +16,7 @@ public class OpenGallery : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		//fetch screenshots
 		files = Directory.GetFiles(Application.persistentDataPath + "/", "*.png");
 		if (files.Length > 0)
 		{
